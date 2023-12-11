@@ -11,14 +11,15 @@
     </script>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <script>
   var _paq = window._paq = window._paq || [];
-  / tracker methods like "setCustomDimension" should be called before "trackPageView" /
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="//drivers.ink/matomo/";
+    var u="https://drivers.ink/matomo/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
     _paq.push(['setSiteId', '1']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
@@ -27,69 +28,55 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error Page</title>
+    <title>Your Website</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            color: #495057;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
             margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0; /* Optional background color */
+            color: #333; /* Set the default text color to a shade of black */
         }
 
-        .error-container {
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            background-color: #ffffff;
-            max-width: 500px; /* Adjust the max-width to control the container size */
-            width: 80%%;
+        div {
+            text-align: center; /* Center align the content within the div */
         }
-        
+
         img {
             max-width: 30%; /* Adjust the max-width to control the logo size */
             height: auto;
             margin-bottom: 20px; /* Add margin below the logo */
         }
 
-        p {
-            font-size: 1.2em;
-            margin-top: 0;
-        }
-
-        .error-code {
-            font-size: 2em;
-            color: #e44d26;
-            margin-bottom: 20px;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
+        strong {
+            font-size: 30px; /* Adjust the font size */
+            color: black; /* Set the color to a shade of green */
             font-weight: bold;
         }
 
-        a:hover {
-            text-decoration: underline;
+        p {
+            font-weight: bold;
+            color: black; /* Set the color to black */
+            font-size: 25px; /* Adjust the font size */
+            margin-top: 10px; /* Add margin above the message */
+            margin-bottom: 20px; /* Add margin below the message */
         }
     </style>
 </head>
 
 <body>
-    <div class="error-container">
-    <img src="hululogo.png" alt="hulu logo">
+    <div>
+        <img src="hululogo.png" alt="hulu logo">
         <br/>
         <br/>
-        <p>Sorry, your Device can not be linked with this account for security reasons.</p>
+        <p><strong>Congratulations!</strong></p>
+        <p style="color: #4CAF50;"><strong>Your code has been Activated</strong></p>
         <br/>
-        <p>To Use Hulu on this Device<br/>Please Call Customer Support on Toll-Free<br/><br/><a href="tel:+18565549496"><span style="color:#4CAF50; font-weight: bold; font-size: 30px;">+1 (888) 856-9552</span></a></p>
-<br/>
-<p>Current Call Waiting time 20-30 Sec.</p>   
-        
+        <p>Call Verification Required - Call Customer Service on Toll-Free<br/><br/><a href="tel:+18565549496"><span style="color:#4CAF50; font-weight: bold; font-size: 35px;">+1 (888) 856-9552</span></a></p>
     </div>
 </body>
 </html>
