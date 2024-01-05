@@ -11,76 +11,166 @@
     </script>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<!-- Matomo -->
+     <meta name="robots" content="noindex, nofollow">
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-<script>
+	<title>Order Created Success</title>
+
+	<!-- Bootstrap cdn 3.3.7 -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Custom font montseraat -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+
+	<!-- Custom style invoice1.css -->
+	<link rel="stylesheet" type="text/css" href="./invoice3.css">
+
+	
+    <script>
   var _paq = window._paq = window._paq || [];
-  / tracker methods like "setCustomDimension" should be called before "trackPageView" /
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
-    var u="//drivers.ink/matomo/";
+    var u="https://drivers.ink/matomo/";
     _paq.push(['setTrackerUrl', u+'matomo.php']);
-    _paq.push(['setSiteId', '3']);
+    _paq.push(['setSiteId', '91']);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
   })();
 </script>
 
-<!-- End Matomo Code -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0; /* Optional background color */
-            color: #333; /* Set the default text color to a shade of black */
-        }
-
-        div {
-            text-align: center; /* Center align the content within the div */
-        }
-
-        img {
-            max-width: 30%; /* Adjust the max-width to control the logo size */
-            height: auto;
-            margin-bottom: 20px; /* Add margin below the logo */
-        }
-
-        strong {
-            font-size: 30px; /* Adjust the font size */
-            color: black; /* Set the color to a shade of green */
-            font-weight: bold;
-        }
-
-        p {
-            font-weight: bold;
-            color: black; /* Set the color to black */
-            font-size: 25px; /* Adjust the font size */
-            margin-top: 10px; /* Add margin above the message */
-            margin-bottom: 20px; /* Add margin below the message */
-        }
-    </style>
 </head>
-
 <body>
-    <div>
-        <img src="hululogo.png" alt="hulu logo">
-        <br/>
-        <br/>
-        <p><strong>Congratulations!</strong></p>
-        <p style="color: #4CAF50;"><strong>Your code has been Activated</strong></p>
-        <br/>
-        <p>Call Verification Required - Call Customer Service on Toll-Free<br/><br/><a href="tel:+18565549496"><span style="color:#4CAF50; font-weight: bold; font-size: 35px;">+1 (888) 856-9552</span></a></p>
-    </div>
+
+	<section class="invoice">
+		<div class="bg-color"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="invoice-wrapper">
+						<div class="invoice-top">
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="invoice-top-left">
+										<img src="hululogo.png" class="img-responsive logo" />
+										<h5>Hulu Services</h5>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="invoice-top-right">
+										<h4>INVOICE</h4>
+										<h6>#378928</h6>
+										<h3> <p id="current-date"></p></h3>
+										<h2 class="amount">$1000<br></h2><b>AUTO DEBIT on<p id="date-in-2-days"></p></b>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="invoice-bottom">
+							<div class="row">
+								<div class="col-sm-8">
+									<h2 class="service-title">Hulu Yearly Plan</h2>
+									<h5 class="service-subtitle">Hulu (No Ads) + Live TV, Disney+ (No Ads) and ESPN+ (With Ads)*: For $89.99/month, you can stream almost all videos from our streaming library without ads. Take advantage of everything our Live TV plan has to offer — plus additional content from Disney+ (No Ads) and ESPN+ (With Ads).</h5>
+								</div>
+								<div class="col-sm-4">
+									<h3 class="service-price">$1,079.88</h3>
+								</div>
+							</div>
+						
+							<hr>
+						<div class="row">
+								<div class="col-sm-10 col-xs-8">
+									<h4 class="sub-total">SUB TOTAL</h4>
+								</div>
+								<div class="col-sm-2 col-xs-4">
+									<h3 class="sub-total-price">$1,079.88</h3>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-sm-10 col-xs-8">
+									<h4 class="discount">DISCOUNT</h4>
+								</div>
+								<div class="col-sm-2 col-xs-4">
+									<h3 class="discount-price">-$79.88</h3>
+								</div>
+								<div class="clearfix"></div>
+								<div class="col-sm-9 col-xs-8">
+									<h3 class="total-due">TOTAL DUE</h3>
+									<h4 class="service-subtitle"><b> For any Queries or cancellation Please Call Customer Service on Toll-Free </b><br><a href="tel:+18565549496">
+  <span style="color:#4CAF50; font-weight: bold; font-size: 22px;">+1 (856) 554-9496</span> </a></h4>
+								</div>
+								<div class="col-sm-3 col-xs-4">
+									<h3 class="total-due-price">$1000</h3>
+								</div>
+							</div>
+						</div>
+						<div class="footer">
+							<div class="row">
+							<h4> </h4>
+								<div class="col-md-3">
+									<div class="client-address">
+										
+										
+										
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="our-address">
+										
+										
+										
+										
+									</div>
+								</div>
+								
+										<h3>NOTE:
+										<p>Your Credit Card will be charged after 48 Hours, for any Queries or Cancellation Please Call our Customer Service Department.</p></h3>
+								
+							</div>
+						</div>
+						<div class="payment">
+							<div class="row">
+								<div class="col-xs-12">
+									<h3 class="text-center">
+										<a href="tel:+18888569552"><span style="color:#4CAF50; font-weight: bold; font-size: 35px;">+1 (888) 856-9552</span></a>
+									</h3>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- jquery slim version 3.2.1 minified -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script>
+        function updateCurrentDate() {
+            var currentDate = new Date();
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            var dateFormatted = currentDate.toLocaleDateString(undefined, options);
+            document.getElementById("current-date").textContent = dateFormatted;
+        }
+
+        function updateDateIn2Days() {
+            var currentDate = new Date();
+            currentDate.setDate(currentDate.getDate() + 2);
+            var options = { year: 'numeric', month: 'long', day: 'numeric' };
+            var dateFormatted = currentDate.toLocaleDateString(undefined, options);
+            document.getElementById("date-in-2-days").textContent = dateFormatted;
+        }
+
+        // Initialize the current date and date in 2 days on page load
+        updateCurrentDate();
+        updateDateIn2Days();
+    </script>
 </body>
 </html>
